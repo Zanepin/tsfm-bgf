@@ -1,0 +1,48 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+
+# test scripts & log files
+Tsline/test_regression.py
+*.csv
+*.tsv
+*.log
+
+# training cache & model weights
+output_*/
+saved_models/
+checkpoints/
+lightning_logs/
+.lr_find*.ckpt
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.bin
+
+# fine-tuned model checkpoints (reproducible via training scripts)
+TSFMs/Chronos/fine-tuned/chronos-2/chronos-2-finetuned/
+
+# cloned upstream repos (documented in README with commit hashes)
+TSFMs/Chronos/fine-tuned/chronos-bolt/chronos-forecasting/
+TSFMs/Chronos/fine-tuned/chronos-2/chronos-forecasting/
+
+# distributed & temp files
+.darts/
+.gluonts/
+.pytest_cache/
+.DS_Store
+.env
+
+# IDE setting
+.idea/
+.vscode/
+
+# virtual environments
+.venv/
+
+# debug scripts
+*debug_*.py
