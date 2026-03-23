@@ -83,7 +83,7 @@ def generate_windows(sessions, input_len, output_len, stride):
             x = seq[i: i + input_len]
             y = seq[i + input_len: i + input_len + output_len]
             X_list.append(x)
-            y_list.append(y)
+            Y_list.append(y)
     return np.array(X_list), np.array(Y_list)
 
 
