@@ -36,4 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest; if [ $? -eq 5 ]; then exit 0; fi
+        set +e
+        pytest
+        EXIT_CODE=$?
+        if [ $EXIT_CODE -eq 5 ]; then exit 0; fi
+        exit $EXIT_CODE
